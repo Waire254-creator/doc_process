@@ -1,0 +1,170 @@
+# Document Processor Web App Project Structure
+
+```
+document-processor-web-app/
+│
+├── frontend/
+│   ├── public/
+│   │   ├── images/
+│   │   │   ├── merge_pdf.png
+│   │   │   ├── split_pdf.png
+│   │   │   ├── compress_pdf.png
+│   │   │   ├── organize_pdf.png
+│   │   │   ├── rotate_pdf.png
+│   │   │   ├── sign_pdf.png
+│   │   │   ├── add_watermark_to_pdf.png
+│   │   │   ├── repair_pdf.png
+│   │   │   ├── number_pdf.png
+│   │   │   ├── edit_pdf.png
+│   │   │   ├── extract_table_from_pdf.png
+│   │   │   ├── pdf_to_excel.png
+│   │   │   ├── excel_to_pdf.png
+│   │   │   ├── pdf_to_word.png
+│   │   │   ├── word_to_pdf.png
+│   │   │   ├── pdf_to_powerpoint.png
+│   │   │   ├── powerpoint_to_pdf.png
+│   │   │   ├── html_to_pdf.png
+│   │   │   ├── pdf_to_html.png
+│   │   │   ├── extract_table.png
+│   │   │   ├── ocr_pdf.png
+│   │   │   └── pdf_to_text.png
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Header.js
+│   │   │   ├── Footer.js
+│   │   │   ├── IconButton.js
+│   │   │   ├── AuthButtons.js
+│   │   │   ├── PricingTable.js
+│   │   │   └── SubscriptionModal.js
+│   │   ├── pages/
+│   │   │   ├── Home.js
+│   │   │   ├── Pricing.js
+│   │   │   ├── SignUp.js
+│   │   │   ├── Login.js
+│   │   │   ├── UserProfile.js
+│   │   │   ├── BillingInfo.js
+│   │   │   ├── PaymentHistory.js
+│   │   │   ├── UpgradeAccount.js
+│   │   │   ├── MergePDF.js
+│   │   │   ├── SplitPDF.js
+│   │   │   ├── CompressPDF.js
+│   │   │   ├── OCRPDF.js
+│   │   │   ├── OrganizePDF.js
+│   │   │   ├── RotatePDF.js
+│   │   │   ├── SignPDF.js
+│   │   │   ├── WatermarkPDF.js
+│   │   │   ├── RepairPDF.js
+│   │   │   ├── NumberPDF.js
+│   │   │   ├── EditPDF.js
+│   │   │   ├── ExtractTable.js
+│   │   │   ├── PDFtoExcel.js
+│   │   │   ├── ExceltoPDF.js
+│   │   │   ├── PDFtoWord.js
+│   │   │   ├── WordtoPDF.js
+│   │   │   ├── PDFtoPowerPoint.js
+│   │   │   ├── PowerPointtoPDF.js
+│   │   │   ├── HTMLtoPDF.js
+│   │   │   ├── PDFtoHTML.js
+│   │   │   ├── AnalyzeExcel.js
+│   │   │   ├── AnalyzeWord.js
+│   │   │   ├── AnalyzePDF.js
+│   │   │   ├── AnalyzeCSV.js
+│   │   │   ├── AnalyzeText.js
+│   │   │   └── AnalyzeImage.js
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── auth.js
+│   │   │   ├── payment.js
+│   │   │   └── subscription.js
+│   │   ├── styles/
+│   │   │   ├── global.css
+│   │   │   ├── Header.css
+│   │   │   ├── Footer.css
+│   │   │   └── IconButton.css
+│   │   ├── utils/
+│   │   │   ├── helpers.js
+│   │   │   └── subscriptionUtils.js
+│   │   ├── contexts/
+│   │   │   └── UserContext.js
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── templates/
+│   │   ├── base.html
+│   │   └── home.html
+│   ├── package.json
+│   └── README.md
+│
+├── backend/
+│   ├── api-gateway/
+│   │   ├── src/
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   ├── auth-service/
+│   │   ├── src/
+│   │   │   ├── controllers/
+│   │   │   │   ├── authController.js
+│   │   │   │   └── userController.js
+│   │   │   ├── models/
+│   │   │   │   └── User.js
+│   │   │   ├── routes/
+│   │   │   │   ├── authRoutes.js
+│   │   │   │   └── userRoutes.js
+│   │   │   └── index.js
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   ├── billing-service/
+│   │   ├── src/
+│   │   │   ├── controllers/
+│   │   │   │   ├── billingController.js
+│   │   │   │   └── subscriptionController.js
+│   │   │   ├── models/
+│   │   │   │   ├── Invoice.js
+│   │   │   │   └── Subscription.js
+│   │   │   ├── routes/
+│   │   │   │   ├── billingRoutes.js
+│   │   │   │   └── subscriptionRoutes.js
+│   │   │   └── index.js
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   ├── pdf-service/
+│   │   ├── src/
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   ├── conversion-service/
+│   │   ├── src/
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   ├── analysis-service/
+│   │   ├── src/
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   ├── ocr-service/
+│   │   ├── src/
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   └── ml-service/
+│       ├── src/
+│       ├── Dockerfile
+│       └── requirements.txt
+│
+├── infrastructure/
+│   ├── docker-compose.yml
+│   ├── nginx.conf
+│   └── terraform/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+│
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── e2e/
+│
+├── docs/
+│   ├── api/
+│   ├── architecture/
+│   └── user-guide/
+│
+└── README.md
+```
